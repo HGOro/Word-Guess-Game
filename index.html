@@ -6,39 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Word Guess Game</title>
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href="./assets/css/style.css">
 </head>
 <body>
     <!--this is the container for the whole game (from title row down to "losses" at the bottom)-->
     <div class= "container">
-
-        <!--container for the title Hernan's Hangman Game, will be its own row?-->
-        <div class = "container">
-            <h1>Hernan's Silent H Hangman Game</h1>
+        <!--container for the title Hernan's Hangman Game, will be its own row?-->  
+        <div class="jumbotron">
+            <h1 id="main-header">Hernan's Silent H Hangman Game</h1>
             <h4>Each answer has a silent "H" somewhere in the word. Just like Hernan!</h4>
-            <h4>Guess The Word!</h4>
-            <p>(click any letter to begin.)</p>
         </div>
+        
 
         <!--Word Display. Will have two rows: one for title "Word to Guess" and one for the "_ _ _ _" box displaying the mystery word-->
-        <div class="container">
-            <!--row for Word to Guess title-->
-            <div class= "row">
-                <div class = "col-md-12">
+        <div class="container row">
+            <div class="col-md-6">
+                <div class="row">
                     <div>
-                        <h2>Word to Guess</h2>
+                        <h4>Guess The Word!</h4>
+                        <p>(click or type a letter)</p>
+                    </div>
+                </div>
+                <!-- row for the "_ _ _ _ _" display-->
+                <div class= "row">
+                    <div class = "col-md-6">
+                        <div>
+                            <h2>_ _ _ _ _ _</h2>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- row for the "_ _ _ _ _" display-->
-            <div class="row">
-
+            <!--IMG div-->
+            <div class="col-md-6">
+                <div>img</div>
             </div>
         </div>
 
 
 
     </div>
-
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <script></script>
 </body>
 </html>

@@ -1,2 +1,2 @@
 # Word-Guess-Game
-HW3-Word Guess Game
+Silent H Word Guess Game
