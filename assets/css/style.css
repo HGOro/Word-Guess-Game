@@ -1,3 +1,14 @@
 #main-header{
     color: blue;
 }
+
+#gameDiv,
+#imgDiv{
+    border: 10px solid darkgray;
+    min-width: 50%;
+    min-height: 100%;
+}
+
+#mainContain{
+    width: 100%;
+}
