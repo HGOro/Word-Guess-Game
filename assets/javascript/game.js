@@ -1,22 +1,49 @@
 $(document).ready(function(){
 
-    
+    // word array
+     let wordsToGuess = [
+        "why",
+        "hour"
+    ]
 
+    // player options A-Z
+    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+    //guess counter for corresponding images
+    let guessesLeft = 0;
 
+    //letters guessed incorrectly
+    let wrongGuesses = [];
 
+    //player input on key
+    document.onkeyup = function(event){
+        let playerGuess = event.key.toLowerCase();
+        console.log(`KEY: ${playerGuess}`);
+    }
+
+    //render each word from wordArray
+    let renderWord = function(){
+        for(var i = 0; i < wordsToGuess.length; i++){
+            console.log(wordsToGuess[i]);
+        }
+
+        
+        $("#wordDisplay").html(wordsToGuess[i]);
+    }
+
+    renderWord();
 
 
 
 })
-    
+
 //Player INPUT. Will need to have an onkey event that connects to above correct/incorrect displays
 //reveal player guesses (letters input) not in the word
 
 
 // if letter guessed is correct, reveal the letter in the word box
 // if Letter guessed incorrectly, display in incorrect guesses box
-// if word is completed before guesses run out, add 1 to Win count, restart with new word
+// if word is completed before guesses run out, display celebration image, restart with new word
 // if guess count reaches zero, add 1 to Loss count, restart with new word
 
 

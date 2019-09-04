@@ -1,3 +1,7 @@
+body{
+    background-color: honeydew;
+}
+
 #main-header{
     color: blue;
 }
@@ -11,4 +15,13 @@
 
 #mainContain{
     width: 100%;
+    margin: auto;
+}
+
+#lettersGuessed{
+    border: 5px solid lightgrey;
+}
+
+#btnDiv{
+    border: 5px solid darkgray;
 }
