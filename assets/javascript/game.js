@@ -3,17 +3,19 @@ $(document).ready(function(){
     // word array
      let wordsToGuess = [
         "why",
-        "hour"
-    ]
-
+        "hour",
+        "honor",
+        "through",
+        "exhausted"
+    ];
+    //answer
+    let answer        = "";
     // player options A-Z
-    let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
+    let alphabet      = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     //guess counter for corresponding images
-    let guessesLeft = 0;
-
+    let guessCount    = 0;
     //letters guessed incorrectly
-    let wrongGuesses = [];
+    let wrongLetters  = [];
 
     //player input on key
     document.onkeyup = function(event){
@@ -21,18 +23,25 @@ $(document).ready(function(){
         console.log(`KEY: ${playerGuess}`);
     }
 
-    //render each word from wordArray
+    //a function to render random word from wordArray
+    //set that random word to the "answer"
     let renderWord = function(){
-        for(var i = 0; i < wordsToGuess.length; i++){
-            console.log(wordsToGuess[i]);
-        }
+        answer = wordsToGuess[Math.floor(Math.random() * wordsToGuess.length)];
+        console.log("answer: " + answer);
 
-        
-        $("#wordDisplay").html(wordsToGuess[i]);
+
+        // for(var i = 0; i < wordsToGuess.length; i++){
+            // console.log(wordsToGuess[i]);
+        // }
+// 
+        // 
+        // $("#wordDisplay").html(wordsToGuess[i]);
     }
 
     renderWord();
 
+    // targetColor = colors[Math.floor(Math.random() * colors.length)];
+    //     $("#rand-target-color").text(targetColor);
 
 
 })
