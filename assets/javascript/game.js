@@ -43,9 +43,9 @@ $(document).ready(function(){
 
         // [x]make each letter display dynamically in the word div
         for(var i = 0; i < answer.length; i++){
-             console.log(answer[i]);
+            // console.log(answer[i]);
             answerLetters.push(answer[i]);
-             console.log("AL:I "+ answerLetters[i] + ": " + i);
+             console.log("aLI: "+ i + " " + answerLetters[i]);
             $("#wordDisplay").html(answer);
 
         // [x]make as many  " _ "'s display dynamically as the letter count
@@ -67,23 +67,21 @@ $(document).ready(function(){
     // player input on key
     document.onkeyup = function(event){
         let playerGuess = event.key.toLowerCase();
-        console.log(`KEY: ${playerGuess}`);
+        //console.log(`KEY: ${playerGuess}`);
 
 
          for(var j = 0; j < answer.length; j++){
 
             if (playerGuess === answerLetters[j]){
-                console.log(`correct! G: ${playerGuess} j=${[j]}`);
+                console.log(`correct! ${playerGuess} j=${[j]}`);
+            } else {
+                console.log(`wrong! ${playerGuess}`);
             }
 
         //     if (playerGuess === answerSplit[j]) {
         //         // answerSplit[j] === blanks[j];
         //         console.log("you guessed a letter");
-                
-        //     } else {
-        //         console.log("wrong letter");
-                    //push to wrong letters div
-        //     };
+        //     }
 
          }
 
